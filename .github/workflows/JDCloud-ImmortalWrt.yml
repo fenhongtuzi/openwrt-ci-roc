@@ -150,12 +150,12 @@ jobs:
         body: |
           **This is OpenWrt Firmware for ${{ env.FIRMWARE_TAG }}**
           ### 📒 固件信息
-          - 这是开启全功能NSS的6.12内核固件，默认主题为Aurora；该固件在ImmortalWrt的基础上，添加了额外的软件包cpufreq、ddns、upnp、wol、samba4、vlmcsd、aria2、autoreboot、uhttpd、frps、frpc、diskman、hd-idle、acme、openlist2、wireguard、watchcat、3cat、passwall、gecoosac，并添加了若干工具，具体详见JDCloud.config(NoWiFi.config)和General.config。
+          - 这是开启全功能NSS的6.12内核固件，自用，具体详见JDCloud.config(NoWiFi.config)和General.config。
           - 💻 这是 ${{ env.FIRMWARE_TAG }} 平台使用的 OpenWrt 固件
           - ⚽ 固件源码: ${{ env.REPO_URL }}
           - 💝 源码分支: ${{ env.REPO_BRANCH }}
-          - 🌐 默认地址: **192.168.2.1**
-          - 🔑 默认密码: none
+          - 🌐 默认地址: **192.168.1.1**
+          - 🔑 默认密码: 
           ### 🧊 固件版本
           - 固件内核版本：**${{ env.VERSION_KERNEL }}**
           - 固件编译前最后一次➦[主源码](${{ env.REPO_URL }})更新记录
