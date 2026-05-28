@@ -86,6 +86,8 @@ git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall package
 git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall2 package/luci-app-passwall2
 git clone --depth=1 https://github.com/vernesong/OpenClash package/luci-app-openclash
 
+git clone --depth=1 https://github.com/nikkinikki-org/OpenWrt-nikki package/luci-app-momo
+
 # 清理 PassWall 的 chnlist 规则文件
 # echo "baidu.com"  > package/luci-app-passwall/luci-app-passwall/root/usr/share/passwall/rules/chnlist
 
