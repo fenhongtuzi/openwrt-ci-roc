@@ -48,8 +48,8 @@ function git_sparse_clone() {
 }
 
 # Aria2 & nginx & Go & frp & Argon & Aurora & OpenList & Lucky & wechatpush & OpenAppFilter & 集客无线AC控制器 & 雅典娜LED控制
-# git_sparse_clone aria2 https://github.com/laipeng668/packages net/aria2
-# mv -f package/aria2 feeds/packages/net/aria2
+git_sparse_clone aria2 https://github.com/laipeng668/packages net/aria2
+mv -f package/aria2 feeds/packages/net/aria2
 git_sparse_clone nginx https://github.com/laipeng668/packages net/nginx
 mv -f package/nginx feeds/packages/net/nginx
 git_sparse_clone ariang https://github.com/laipeng668/packages net/ariang
@@ -80,11 +80,11 @@ rm -rf feeds/packages/net/{xray-core,v2ray-geodata,sing-box,chinadns-ng,dns2sock
 git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall-packages package/passwall-packages
 
 # 移除 OpenWrt Feeds 过时的LuCI版本
-# rm -rf feeds/luci/applications/luci-app-passwall
-# rm -rf feeds/luci/applications/luci-app-openclash
-# git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall package/luci-app-passwall
-# git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall2 package/luci-app-passwall2
-# git clone --depth=1 https://github.com/vernesong/OpenClash package/luci-app-openclash
+rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/luci/applications/luci-app-openclash
+git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall package/luci-app-passwall
+git clone --depth=1 https://github.com/Openwrt-Passwall/openwrt-passwall2 package/luci-app-passwall2
+git clone --depth=1 https://github.com/vernesong/OpenClash package/luci-app-openclash
 
 # 清理 PassWall 的 chnlist 规则文件
 # echo "baidu.com"  > package/luci-app-passwall/luci-app-passwall/root/usr/share/passwall/rules/chnlist
