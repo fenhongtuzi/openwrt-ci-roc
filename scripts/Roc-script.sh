@@ -65,6 +65,10 @@ mv -f package/golang feeds/packages/lang/golang
 # mv -f package/luci-app-frpc feeds/luci/applications/luci-app-frpc
 # mv -f package/luci-app-frps feeds/luci/applications/luci-app-frps
 git clone --depth=1 https://github.com/jerrykuku/luci-theme-argon feeds/luci/themes/luci-theme-argon
+# 替换 Argon 主题图标
+cp -f $GITHUB_WORKSPACE/custom-files/favicon.ico feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/favicon.ico
+cp -f $GITHUB_WORKSPACE/custom-files/logo.svg feeds/luci/themes/luci-theme-argon/htdocs/luci-static/argon/img/logo.svg
+
 git clone --depth=1 https://github.com/jerrykuku/luci-app-argon-config feeds/luci/applications/luci-app-argon-config
 # git clone --depth=1 https://github.com/eamonxg/luci-theme-aurora feeds/luci/themes/luci-theme-aurora
 # git clone --depth=1 https://github.com/eamonxg/luci-app-aurora-config feeds/luci/applications/luci-app-aurora-config
