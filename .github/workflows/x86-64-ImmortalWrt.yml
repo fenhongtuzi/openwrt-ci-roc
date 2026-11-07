@@ -81,10 +81,13 @@ jobs:
     # ========== 新增步骤：增加 Swap 虚拟内存 ==========
     - name: Add Swap(增加虚拟内存)
       run: |
-        sudo fallocate -l 6G /swapfile
-        sudo chmod 600 /swapfile
-        sudo mkswap /swapfile
-        sudo swapon /swapfile
+        # 先关闭系统原有交换分区，避免冲突
+        sudo swapoff -a
+        # 使用 dd 命令创建 6G 交换文件，放到 /mnt 目录
+        sudo dd if=/dev/zero of=/mnt/swapfile bs=1M count=6144 status=progress
+        sudo chmod 600 /mnt/swapfile
+        sudo mkswap /mnt/swapfile
+        sudo swapon /mnt/swapfile
         echo "Swap 已启用，当前内存情况："
         free -h
 
